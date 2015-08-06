@@ -1,0 +1,462 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link type="text/css" rel="stylesheet" href="assets/banner-styles.css">
+<title>Ansira Troubleshooting</title>
+<link rel="stylesheet" href="assets/grid960.css" type="text/css" media="screen" title="" charset="utf-8">
+<meta name="viewport" content="width=1065">
+<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+<link rel="Stylesheet" href="assets/sprockets.css" type="text/css" media="screen">
+<script type="text/javascript" src="assets/sprockets.js"></script><script src="assets/ga.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/ie.css" />
+<![endif]-->
+</head>
+
+<style type="text/css" media="screen">
+  body.browsers div.card div.cardcontent hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px;
+    background: none;
+  }
+  
+  body.browsers div.card div.cardcontent hr.first {
+    margin-top: 0;
+  }
+  
+  body.browsers div.container_12 h3 {
+     font-size: 24px;
+     font-family: Helvetica, Arial, sans-serif;
+     line-height: 36px;
+     margin: 10px 0;
+     background: transparent url('assets/icons_troubleshooting.png') no-repeat scroll top left;
+     padding-left: 40px;
+  }
+  
+  body.browsers div.container_12 h3.cookie { background-position: left -36px; }
+  body.browsers div.container_12 h3.update { background-position: left -72px; }
+  body.browsers div.container_12 h3.connection { background-position: left -108px; }
+  
+  body.browsers div.main-copy h4 {
+    margin: 0 0 0.5em 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  body.browsers div.main-copy p+h4 {
+    margin-top: 1.5em;
+  }
+  
+  body.browsers div.main-copy h5 {
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Helvetica, Arial, sans-serif;
+    margin: 0 0 1.5em 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: normal;
+    color: #ccc;
+  }
+  
+  body.browsers div.main-copy h5 a.selected {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+  }
+  
+  body.browsers div.side-copy p, body.browsers div.main-copy.grid_12 p {
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  
+  body.browsers div.main-copy.grid_3 p {
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    line-height: 16px;
+  }
+  
+  body.browsers div.instruction-set {
+    position: relative;
+  }
+  
+  body.browsers div.main-copy ol {
+    counter-reset: item;
+    font-size: 16px;
+    line-height: 1.2em;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body.browsers div.main-copy ol li {
+    padding-bottom: 1.0em;
+    font-weight: bold;
+    display: block;
+    margin-left: 2em;
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Helvetica, Arial, sans-serif;
+  }
+  
+  body.browsers div.main-copy ol li:before {
+    display: inline-block;
+    content: counter(item) ". ";
+    counter-increment: item;
+    width: 2em;
+    margin-left: -2em;
+  }
+  
+  body.browsers div.main-copy ol li span {
+    font-weight: normal;
+  }
+  
+  body.browsers ul.downloads {
+    list-style:none;
+    margin: 20px 0;
+    padding:0;
+    overflow:hidden;
+  }
+  
+  body.browsers ul.downloads li {
+    float:left;
+    text-align:center;
+    width:25%;
+  }
+  
+  body.browsers ul.downloads div {
+    border-left:1px solid #efefef;
+    padding:0;
+  }
+  
+  body.browsers ul.downloads div.first {
+    border-left: none;
+  }
+  
+  body.browsers ul.downloads a {
+    text-decoration: none;
+  }
+  
+  body.browsers ul.downloads h4 {
+    margin: 0 0 2px 0;
+  }
+  
+body.browsers ul.downloads h4 a {
+    padding-top: 76px;
+    display: block;
+    background: transparent url('assets/icons_browsers-new.png') no-repeat top center;
+  }
+  
+  body.browsers ul.downloads h4#download_firefox a { background-position: center -144px; }
+  body.browsers ul.downloads h4#download_chrome a { background-position: center -288px; }
+  body.browsers ul.downloads h4#download_safari a { background-position: center -432px; }
+  
+  body.browsers div.main-copy ul.downloads h5 {
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Helvetica, Arial, sans-serif;
+    margin: 0;
+    color: #777;
+  }
+  
+  body.browsers p.important-note {
+    background-color: #EDF3FE;
+    -webkit-border-radius: 10px;
+    -mozilla-border-radius: 10px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Helvetica, Arial, sans-serif;
+    padding: 10px;
+    font-size: 12px;
+    line-height:18px;
+  }
+  
+  body.browsers div.faq p {
+    width: 100%;
+    font-weight: bold;
+  }
+</style>
+<body class="accounts browsers" onload="setupZoom()" dcjnfaoifoefmnbhhlbppaebgnccfddf="1.2.8"><div id="ZoomSpin" style="position: absolute; left: 10px; top: 10px; visibility: hidden; z-index: 525;"><img id="SpinImage" src="assets/zoom-spin-1.png"></div><div id="ZoomBox" style="position: absolute; left: 10px; top: 10px; visibility: hidden; z-index: 499;"><img src="assets/spacer.gif" id="ZoomImage" border="0" style="-webkit-box-shadow: rgba(0, 0, 0, 0) 0px 5px 25px; display: block; width: 10px; height: 10px; cursor: pointer;"><div id="ZoomClose" style="position: absolute; left: -15px; top: -15px; visibility: hidden;"><img src="assets/closebox.png" width="30" height="30" border="0" style="cursor: pointer;"></div></div><div id="ZoomCapDiv" style="position: absolute; visibility: hidden; margin-left: auto; margin-right: auto; z-index: 501;"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td align="right"><img src="assets/zoom-caption-l.png" width="13" height="26" style="display: block;"></td><td background="assets/zoom-caption-fill.png" id="ZoomCaption" valign="middle" style="font-size: 14px; font-family: Helvetica; font-weight: bold; color: rgb(255, 255, 255); text-shadow: rgb(0, 0, 0) 0px 2px 4px; white-space: nowrap;"></td><td><img src="assets/zoom-caption-r.png" width="13" height="26" style="display: block;"></td></tr></tbody></table></div><div id="wm-ipp" lang="en" class="__wb_banner_div" style="display: block; position: relative; padding: 0px 5px; min-height: 70px; min-width: 800px;">
+
+  <div class="nav">
+  <ul>
+    <li class="date">
+      <script type="text/javascript">
+      <!-- 
+      // Array of day names
+      var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday",
+      				"Thursday","Friday","Saturday");
+      var now = new Date();
+      document.write("Today is " + dayNames[now.getDay()] + ". Have a great day!");
+      // -->
+      </script>
+    </li>
+      <li class="logo"><a href="http://www.ansira.com" target="new"><img src="assets/Ansira.png" align="absmiddle" class="logo" alt="Ansira Engagement Marketing"></a></li>
+  </ul>
+</div>
+
+  <div class="container">
+    <div class="card">
+      <div class="cardcontent">
+        <div class="tour-right" style="padding-bottom: 0;">
+          <img src="assets/browsers_intro.png" align="right" width="500" height="275" alt="Browsers Intro">
+          <h1 style="font-size: 42px;">Browser trouble?<br>We can help.</h1>
+          <h2>If you’re not seeing what you expect in one of our applications, these quick fixes should get you back on track.</h2>
+        </div>
+
+        <hr class="first">
+
+        <div class="container_12">
+          <div class="grid_12">
+            <h3>Empty your browser’s cache</h3>
+          </div>
+          <div class="clear">&nbsp;</div>
+          <div class="side-copy grid_4">
+            <p>Clearing your browser’s cache can force recently changed web pages to show up properly. Each browser handles caching differently, so be sure to follow the correct steps for your particular browser.</p>
+            <p><strong>Note:</strong> If your browser version is not listed here, <a href="http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=32050" target="new">Google</a> has more comprehensive instructions covering older versions of these browsers.</p>
+          </div>
+          <div class="main-copy grid_8">
+            
+            <div class="instruction-set">
+              <h5><a href="javascript://" class="selected">Internet Explorer</a> | <a href="javascript://">Firefox</a> | <a href="javascript://">Chrome</a> | <a href="javascript://">Safari</a></h5>
+              
+              <div>
+                <ol id="cache_ie" class="selected">
+                  <li><span>In your browser's menu bar go to Tools → Internet Options → General → Browsing History → Delete... </span></li>
+                  <li><span>From this window delete the Temporary Internet Files.</span></li>
+                  <li><span>Close this window, then select OK before exiting the browser.</span></li>
+                </ol>
+              </div>
+              
+              <div style="display:none;">
+                <ol id="cache_firefox">
+                  <li><span>In your browser's menu bar, go to Options → Clear Recent History.</span></li>
+                  <li><span>Under "Time Range to Clear" select "Everything."</span></li>
+                  <li><span>Expand the "Details" section and check "Cache."</span></li>
+                  <li><span>Click the "Clear Now" button.</span></li>
+                </ol>
+              </div>
+
+              <div style="display:none;">
+                <ol id="cache_chrome">
+                  <li><span>In your browser's toolbar go to Tools → Clear browsing data...</span></li>
+                  <li><span>Click the button labeled "Clear browsing data."</span></li>
+                  <li><span>Select the checkboxes for the types of information that you want to remove.</span></li>
+                  <li><span>Click "Clear browsing data."</span></li>
+                </ol>
+              </div>
+
+              <div style="display:none;">
+                <ol id="cache_safari">
+                  <li><span>In the Mac OS X menu bar, go to Safari → Empty Cache.</span></li>
+                </ol>
+              </div>
+              
+            </div>
+          </div>
+          <div class="clear">&nbsp;</div>
+          
+ 
+            <p class="important-note"><strong>Further reading: </strong><a href="http://refreshyourcache.com" target="new">Refreshyourcache.com </a> will provide you with tutorials how to refresh (clear) the cache from your browser.</p>
+
+          
+          <div class="clear">&nbsp;</div>
+        </div>
+        <hr>
+
+        <div class="container_12">
+          <div class="grid_12">
+            <h3 class="cookie">Remove stale cookies</h3>
+          </div>
+          <div class="clear">&nbsp;</div>
+          <div class="side-copy grid_4">
+            <p>A cookie is a piece of text stored by your browser to help it remember your login information, site preferences, and more. If you are having problems with one of our sites, deleting your cookies will reset your preferences to their default values.</p>
+            <p><strong>Note:</strong> On Firefox, Chrome, and Safari, it is possible to search for and delete specific cookies. On Internet Explorer you will have to delete all cookies.</p>
+          </div>
+          <div class="main-copy grid_8">
+            
+            <div class="instruction-set">
+              <h5><a href="javascript://" class="selected">Internet Explorer</a> | <a href="javascript://">Firefox</a> | <a href="javascript://">Chrome</a> | <a href="javascript://">Safari</a></h5>
+              
+              <div>
+                <ol id="cookie_ie" class="selected">
+                  <li><span>In your browser's menu bar, click on "Tools."</span></li>
+                  <li><span>Click "Internet Options..."</span></li>
+                  <li><span>Under "Temporary Internet Files" on the General Tab, click "Delete Cookies."</span></li>
+                  <li><span>Click "Ok" on the dialog box that says, "Delete all cookies in the Temporary Internet Files Folder?"</span></li>
+                  <li><span>Click "OK" to exit.</span></li>
+                </ol>
+              </div>
+              
+              <div style="display:none;">
+                <ol id="cookie_firefox">
+                  <li><span>In your browser's menu bar, click on "Tools."</span></li>
+                  <li><span>Click "Options..."</span></li>
+                  <li><span>Click on the "Privacy" tab.</span></li>
+                  <li><span>Click on "Show Cookies..."</span></li>
+                  <li><span>Depending on the products you use, look for cookies ending in basecamphq.com, highrisehq.com, backpackit.com, or campfirenow.com.</span></li>
+                  <li><span>Select them and click "Remove Cookie."</span></li>
+                  <li><span>Click "Close" to exit.</span></li>
+                </ol>
+              </div>
+                
+              <div style="display:none;">
+                <ol id="cookie_chrome">
+                  <li><span>In your browser's toolbar go to Tools → Options → Under the Hood.</span></li>
+                  <li><span>Content settings in the "Privacy" section.</span></li>
+                  <li><span>On the "Cookies" tab, click Show cookies and other site data.</span></li>
+                  <li><span>Click Close for the Cookies and Other Data dialog when you're done.</span></li>
+                </ol>
+              </div>
+              
+              <div style="display:none;">
+                <ol id="cookie_safari">
+                  <li><span>In the Mac OS X menu bar, select "Safari."</span></li>
+                  <li><span>Click "Preferences..."</span></li>
+                  <li><span>On the "Security" tab, click "Show Cookies."</span></li>
+                  <li><span>Click on "Show Cookies..."</span></li>
+                  <li><span>Depending on the products you use, look for cookies ending in basecamphq.com, highrisehq.com, backpackit.com, or campfirenow.com.</span></li>
+                  <li><span>Select them and click "Remove."</span></li>
+                  <li><span>Click "Done."</span></li>
+                  <li><span>Close the Preferences box.</span></li>
+                </ol>
+              </div>
+              
+            </div>
+            
+          </div>
+          <div class="clear">&nbsp;</div>
+        </div>
+        
+        <hr>
+        
+        <div class="container_12">
+          <div class="grid_12">
+            <h3 class="update">Make sure you’re using a recommended web browser.</h3>
+          </div>
+          
+          <div class="clear">&nbsp;</div>
+          <div class="main-copy grid_12">
+            
+            <h2 style="padding-left: 10px; letter-spacing: normal; margin-top: 30px; margin-bottom: 0;">Ansira recommends:</h2>
+                     
+            <ul class="downloads">
+    		      <li>
+    		        <div class="first">
+    		          <h4 id="download_ie"><a href="http://www.microsoft.com/windows/internet-explorer/" title="Download Internet Explorer" target="new"><span>Internet Explorer</span></a></h4>
+      		        <h5><a href="http://www.microsoft.com/windows/internet-explorer/" title="Download Internet Explorer" target="new">Get the latest version.</a></h5>
+    		        </div>
+    		      </li>
+    		      <li>
+    		        <div>
+    		          <h4 id="download_firefox"><a href="http://www.mozilla.com/firefox/" title="Download Mozilla Firefox" target="new"><span>Mozilla Firefox</span></a></h4>
+      		         <h5><a href="http://www.mozilla.com/firefox/" title="Download Mozilla Firefox"" target="new">Get the latest version.</a></h5>
+    		        </div>
+    		      </li>
+    		      <li>
+    		        <div>
+      		        <h4 id="download_chrome"><a href="http://www.google.com/chrome/" title="Download Google Chrome" target="new"><span>Google Chrome</span></a></h4>
+      		        <h5><a href="http://www.google.com/chrome/" title="Download Google Chrome" target="new">Get the latest version.</a></h5>
+    		        </div>
+    		      </li>
+    		      <li>
+    		        <div>
+      		        <h4 id="download_safari"><a href="http://www.apple.com/safari/" title="Download Apple Safari" target="new"><span>Apple Safari</span></a></h4>
+      		        <h5><a href="http://www.apple.com/safari/" title="Download Apple Safari" target="new">Get the latest version.</a></h5>
+    		        </div>
+    		      </li>
+    		    </ul>
+          </div>         
+          <div class="clear">&nbsp;</div>
+          
+          <div class="main-copy grid_8 suffix_2 prefix_2">
+            <p class="important-note"><strong>Please note:</strong> We do not support legacy versions of <a href="http://www.modern.ie/en-us/ie6countdown" target="new">Internet Explorer</a>.<br /> Please download one of the above recommended browsers.</p>
+          </div>
+          
+          <div class="clear">&nbsp;</div>
+        </div>
+        
+        <hr>
+        
+        <div class="container_12">
+          <div class="grid_12">
+            <h3 class="connection">Check your internet connection</h3>
+          </div>
+          <div class="clear">&nbsp;</div>
+          <div class="main-copy grid_3">
+            <h4>Can you access other major web sites?</h4>
+            <p>If you're having trouble accessing one of our sites, try visiting <a href="http://google.com/" target="new">Google</a>, <a href="http://yahoo.com/">Yahoo</a>, or <a href="http://apple.com/">Apple</a> before submitting a support request. If these sites fail, you may have a more serious connection issue — try our other connection tips to the right.</p>
+            <p>Assuming those major sites show up fine, it's time to verify whether other people can access our products. To look into that, be sure to visit <a href="http://downforeveryoneorjustme.com/" target="new">Down For Everyone Or Just Me</a>.</p>
+            <p>Just you? The best explanation could be a DNS issue. DNS servers figure out how internet domain names (like ansira.com) map to server IP addresses. Try switching to <a href="http://code.google.com/speed/public-dns/" target="new">Google Public DNS</a> or <a href="http://opendns.com/" target="new">Open DNS</a> to see if that resolves the issue.</p>
+          </div>
+          <div class="main-copy grid_3">
+            <h4>Try another browser</h4>
+            <p>Extensions or other software may occasionally corrupt your browser, leading to unexpected behavior. Before making changes to your primary browser, try accessing the internet with another browser like Chrome or Firefox.</p>
+            
+            <h4>Check your anti-virus <br> and firewall settings</h4>
+            <p>Still having issues no matter which browser you're using? Try disabling your anti-virus software — corrupt or partially-uninstalled software can break your access to the internet. Also try disabling your firewall temporarily to see if that helps.</p>
+            <p>If you continue experiencing issues even with anti-virus and firewall disabled, it's time to check your connection to the network.</p>
+          </div>
+          <div class="main-copy grid_3">
+            <h4>On Wi-Fi? Make sure you're connected.</h4>
+            <p>Wireless hotspots are great, but they're not always reliable. If you're using wi-fi but having connection issues, start by verifying your connection to the base station. Are you connected to the base station you expect or did your computer pick up someone else's signal? Did you enter the correct password?</p>
+              <p>If you're on the correct base station and the password checks out, try looking into your signal strength. If it's relatively weak, try moving closer to the hotspot and try accessing the web again.</p>
+              <p>Good signal but still having issues? It may be time to restart the base station and try again in a few minutes.</p>
+          </div>
+          <div class="main-copy grid_3">
+            <h4>Restart your modem and your router.</h4>
+            <p>When all else fails, it's time to check the hardware that connects you to the internet in the first place. If you can access the modem and the router, you'll need to disconnect them from their power source (the power button often just puts them in standby).</p>
+            <p>Once you've powered down the modem and router, wait 10-15 seconds, then plug the modem back in, followed by the router. Allow time for both to boot up and connect by watching the activity lights, then try connecting to the internet again on your computer.</p>
+          </div>
+          <div class="clear">&nbsp;</div>
+        </div>
+  		    
+      </div>
+    </div>
+  
+  <hr>
+  <div class="side-copy grid_4">
+	    
+<p>© 2015 <a href="http://ansira.com/" target="new">Ansira</a>. All Rights Reserved. | <a href="javascript:void(0);" onClick="window.open('http://ansira.com/pPolicy/privacy.html', '', 'height=500,width=500,scrollbars=0');">Privacy</a> | <a href="javascript:void(0);" onClick="window.open('http://auto.emarketspy.com/includes/displayCopyright.cfm', '', 'height=500,width=500,scrollbars=0');">Copyright</a></p>
+
+</div>
+      
+</div>
+  
+</div>
+
+<script type="text/javascript" charset="utf-8">
+  
+  document.observe("dom:loaded", function() {
+    
+    // allow us to toggle between different browser instructions
+    $$('div.instruction-set').each(function(el) {
+      
+      // grab links and lists within this instruction set 
+      var anchors = el.select('a');
+      var instructions = el.select('div');
+      
+      // toggle anchor classes when clicked
+      anchors.each(function(el,i){
+        el.observe("click", function(e){
+          
+          // unbold all links, then bold the one you clicked
+          anchors.each(function(el){ el.removeClassName("selected"); });
+          el.addClassName("selected");
+          
+          instructions.each(function(el){ el.hide(); });
+          instructions[i].appear({duration:0.5});
+        });
+      });
+    });
+  });
+  
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45939404-14', 'agencyondemand-ansira.com');
+  ga('send', 'pageview');
+
+</script>
+
